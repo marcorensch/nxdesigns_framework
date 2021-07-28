@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>System - nx-designs Framework</name>
+    <creationDate>July 2021</creationDate>
+	<author>nx-designs.ch</author>
+	<authorEmail>support@nx-designs.ch</authorEmail>
+	<authorUrl>https://www.nx-designs.ch</authorUrl>
+	<copyright>Copyright© 2021 by nx-designs</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>PLUGIN_SYSTEM_NXDFW_XML_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_nxdesignsframework.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_nxdesignsframework.sys.ini</language>
+	</languages>
+    <files>
+		<folder>language</folder>
+        <filename plugin="nxdesignsframework">nxdesignsframework.php</filename>
+    </files>
+	<updateservers>
+        <server type="extension" priority="1" name="nx-designs Framework (NDF)">
+            <![CDATA[https://update.nx-designs.ch/extensions/plg_nxdesignsframework.xml]]>
+        </server>
+    </updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="download_id"
+					type="text"
+					label="PLUGIN_SYSTEM_NXDFW_DLID"
+					description="PLUGIN_SYSTEM_NXDFW_DLID_DES"
+					default=""
+					required="false"
+					filter="string"
+					size="50"
+				/>
+				<field
+					name="heremaps_api_token"
+					type="text"
+					label="PLUGIN_SYSTEM_NXDFW_HERE_TOKEN"
+					description="PLUGIN_SYSTEM_NXDFW_HERE_TOKEN_DES"
+					default=""
+					required="false"
+					filter="string"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

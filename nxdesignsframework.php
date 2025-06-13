@@ -10,8 +10,9 @@
 
 defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Plugin\CMSPlugin;
 
-class plgSystemNxdesignsframework extends JPlugin
+class plgSystemNxdesignsframework extends CMSPlugin
 {
 	public function onInstallerBeforePackageDownload(&$url, &$headers)
 	{

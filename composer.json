@@ -1,6 +1,6 @@
 {
-  "name": "nxd/askthebrain",
-  "description": "AskTheBrain Component for Joomla! 5.x and never",
+  "name": "nxd/nxdesignsframework",
+  "description": "NXD Framework Plugin for Joomla! 4.4 and never",
   "minimum-stability": "stable",
   "license": "GPL-3.0-or-later",
   "authors": [
@@ -11,7 +11,7 @@
     }
   ],
   "config": {
-    "vendor-dir": "administrator/components/com_askthebrain/vendor",
+    "vendor-dir": "vendor",
     "platform": {
       "php": "8.3"
     }

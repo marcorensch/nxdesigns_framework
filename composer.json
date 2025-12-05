@@ -1,0 +1,33 @@
+{
+  "name": "nxd/nxdesignsframework",
+  "description": "NXD Framework Plugin for Joomla! 4.4 or older",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Marco Rensch",
+      "homepage": "https://www.nx-designs.ch",
+      "role": "Lead Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor",
+    "platform": {
+      "php": "7.3"
+    }
+  },
+  "require": {
+    "php": ">=7.3"
+  },
+  "scripts": {
+    "post-install-deploy": [
+      "rm -rf vendor",
+      "composer clear-cache",
+      "composer install --no-dev --optimize-autoloader"
+    ],
+    "deploy-zip": [
+      "mkdir -p dist",
+      "zip -r dist/plg_nxdesigns_framework_v1.1.1.zip . -x 'composer.*' -x '*.DS_Store' -x '*.git*' -x 'Thumbs.db' -x 'node_modules/*' -x 'vendor/bin/*' -x '.idea' -x '.idea/*' -x '*/.idea' -x '*/.idea/*' '*/.gitignore' -x 'dist/*' -x '*.zip'"
+    ]
+  }
+}

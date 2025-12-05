@@ -7,21 +7,26 @@
 	<authorUrl>https://www.nx-designs.ch</authorUrl>
 	<copyright>Copyright© 2021 by nx-designs</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.1</version>
+	<version>1.1.1</version>
 	<description>PLUGIN_SYSTEM_NXDFW_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.plg_system_nxdesignsframework.ini</language>
 		<language tag="en-GB">en-GB/en-GB.plg_system_nxdesignsframework.sys.ini</language>
 	</languages>
+
     <files>
 		<folder>language</folder>
         <filename plugin="nxdesignsframework">nxdesignsframework.php</filename>
     </files>
+
 	<updateservers>
         <server type="extension" priority="1" name="nx-designs Framework (NDF)">
             <![CDATA[https://update.nx-designs.ch/extensions/plg_nxdesignsframework.xml]]>
         </server>
     </updateservers>
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic">

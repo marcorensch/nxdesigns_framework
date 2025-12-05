@@ -1,1 +1,17 @@
 .idea
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+ehthumbs.db
+Desktop.ini
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Deployment
+dist/
+build/

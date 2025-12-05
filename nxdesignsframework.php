@@ -46,7 +46,7 @@ class plgSystemNxdesignsframework extends CMSPlugin
 			$uri->setVar('download_id', $downloadId);
 
 			// Append the current site domain to URL for logging and validation as our rule is each Download ID will only valid for one domain
-			$siteUri = JUri::getInstance();
+			$siteUri = Uri::getInstance();
 			$uri->setVar('domain', $siteUri->getHost());
 
 			$url = $uri->toString();
@@ -61,10 +61,10 @@ class plgSystemNxdesignsframework extends CMSPlugin
 
 	public function onBeforeRender(){
 	    // Adds here maps api token to HEAD (frontend and backend)
-		$heremapsApiToken = trim($this->params->get('heremaps_api_token'));
-		if (!empty($heremapsApiToken)){
+		$hereMapsApiToken = $this->params->get('heremaps_api_token');
+		if ($hereMapsApiToken){
 			$wa = Factory::getApplication()->getDocument()->getWebAssetManager();
-			$js = 'const nxdHereMapsApiToken = "'.$heremapsApiToken.'";';
+			$js = 'const NXD_FW_HERE_MAPS_API_TOKEN = "'.trim($hereMapsApiToken).'";';
 			$wa->addInlineScript($js);
 		}
     }

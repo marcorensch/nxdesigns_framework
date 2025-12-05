@@ -27,7 +27,7 @@
     ],
     "deploy-zip": [
       "mkdir -p dist",
-      "zip -r dist/com_askthebrain.zip . -x 'composer.*' -x '*.DS_Store' -x '*.git*' -x 'Thumbs.db' -x 'node_modules/*' -x 'vendor/bin/*' -x '.idea' -x '.idea/*' -x '*/.idea' -x '*/.idea/*' '*/.gitignore' -x 'dist/*' -x '*.zip'"
+      "zip -r dist/plg_system_nxdesignsframework.zip . -x 'composer.*' -x '*.DS_Store' -x '*.git*' -x 'Thumbs.db' -x 'node_modules/*' -x 'vendor/bin/*' -x '.idea' -x '.idea/*' -x '*/.idea' -x '*/.idea/*' '*/.gitignore' -x 'dist/*' -x '*.zip'"
     ]
   }
 }

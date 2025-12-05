@@ -1,4 +1,33 @@
-.idea
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.phpstorm.meta.php
+*.iml
+
+# Composer
+vendor/
+composer.lock
+composer.phar
+
+# Node & NPM
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+dist/
+build/
+
+# Build & Deployment
+*.zip
+*.tar.gz
+*.rar
 
 # OS
 .DS_Store
@@ -7,11 +36,37 @@
 ehthumbs.db
 Desktop.ini
 
+# Logs
+*.log
+logs/
+
+# Temp Files
+*.tmp
+*.bak
+.~*
+
 # Environment
 .env
 .env.local
 .env.*.local
 
-# Deployment
-dist/
-build/
+# Testing
+coverage/
+.phpunit.result.cache
+phpunit.xml
+
+# IDE specific
+.vscode/settings.json
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+
+# OS specific
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Project specific (optional)
+.editorconfig
+.gitattributes

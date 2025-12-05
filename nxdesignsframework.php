@@ -3,7 +3,7 @@
  * @package    nx-designs Framework (plg_system_nxdesignsframework)
  *
  * @author     Marco Rensch | nx-designs <support@nx-designs.ch>
- * @copyright  Copyright© 2021 by nx-designs
+ * @copyright  Copyright© 2025 by nx-designs
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @link       http://www.nx-designs.ch
  */
@@ -11,14 +11,15 @@
 defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\CMSPlugin;
+use Joomla\CMS\Uri\Uri;
 
 class plgSystemNxdesignsframework extends CMSPlugin
 {
 	public function onInstallerBeforePackageDownload(&$url, &$headers)
 	{
-		$uri = JUri::getInstance($url);
+		$uri = Uri::getInstance($url);
 
-		// Only process if user attempt to update extensions purchase on your site
+		// Only process if a user attempts to update extensions purchase on NXD
 
 		$host       = $uri->getHost();
 		$validHosts = array('nx-designs.ch', 'www.nx-designs.ch');
@@ -28,7 +29,7 @@ class plgSystemNxdesignsframework extends CMSPlugin
 			return true;
 		}
 
-		// Only process if update is handled via Membership Pro
+		// Only process if the update is handled via Membership Pro
 		$option     = $uri->getVar('option');
 		$documentId = (int) $uri->getVar('document_id');
 
@@ -60,12 +61,11 @@ class plgSystemNxdesignsframework extends CMSPlugin
 
 	public function onBeforeRender(){
 	    // Adds here maps api token to HEAD (frontend and backend)
-		$heremapsApiToken = $this->params->get('heremaps_api_token');
+		$heremapsApiToken = trim($this->params->get('heremaps_api_token'));
 		if (!empty($heremapsApiToken)){
-			$doc = Factory::getDocument();
+			$wa = Factory::getApplication()->getDocument()->getWebAssetManager();
 			$js = 'const nxdHereMapsApiToken = "'.$heremapsApiToken.'";';
-	    	$doc->addScriptDeclaration($js);
+			$wa->addInlineScript($js);
 		}
-		
     }
 }

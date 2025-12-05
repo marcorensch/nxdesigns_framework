@@ -18,7 +18,7 @@ class plgSystemNxdesignsframework extends CMSPlugin
 	{
 		$uri = JUri::getInstance($url);
 
-		// Only process if user attempt to update extensions purchase on your site
+		// Only process if the user attempts to update extensions purchase on NXD
 
 		$host       = $uri->getHost();
 		$validHosts = array('nx-designs.ch', 'www.nx-designs.ch');
